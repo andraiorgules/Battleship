@@ -1,4 +1,11 @@
 #pragma once
 
-void foo();
+
+void Clear();
+
+void Build();
+
+void PlaceShips();
+
+void Scan();
 
