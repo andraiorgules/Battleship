@@ -70,7 +70,7 @@ void Scan()
 
       //change this to only affect 0s that don't have a 1 adjacent
        if(grid[x][y] == 0) //MISS = no ship + no ship adjacent
-      {ß
+      {
         cout << x << ",";
         cout << y << ":";  
         printf("MISS \n");
