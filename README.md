@@ -1,5 +1,5 @@
-## Battleship
-# C++ Programming I : Battleship Assignment
+# Battleship
+## C++ Programming I : Battleship Assignment
 
 Terminal: make build
 
