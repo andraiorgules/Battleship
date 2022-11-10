@@ -55,34 +55,32 @@ void PlaceShips()
 }
 
 //Scan each coordinate and print what is there (HIT, MISS, NEAR MISS)
-//HIT = ship 
-//NEAR MISS = ship is adjacent in up, down, left, right, or diagonal
-//MISS = no ship + no ship adjacent
 void Scan()
 {
-    int x = 0;
-    int y = 0;
-
-  while (x <= rows && y <= columns)
+  for (int x = 0; x < rows; x++)
   {
-    x++;
-    y++;
-
-    if(grid[x][y] == 1)
+    for (int y = 0; y < columns; y++)
     {
-      cout << grid; //print the coordinate
-      printf("HIT");
-    }
+      if(grid[x][y] == 1) //HIT = ship 
+      {
+        cout << x << ",";
+        cout << y << ":";      
+        printf("HIT \n");
+      }
 
-    if(grid[x][y] == 0) //change this to only affect 0s that don't have a 1 adjacent
-    {
-     cout << grid; //print the coordinate
-     printf("MISS");
-    }
+      //change this to only affect 0s that don't have a 1 adjacent
+       if(grid[x][y] == 0) //MISS = no ship + no ship adjacent
+      {ß
+        cout << x << ",";
+        cout << y << ":";  
+        printf("MISS \n");
+      }
 
-    //if the coordinate is a 0 AND there is a 1 adjacent
-    //print the coordinate 
-    //printf("NEAR MISS");
+      //NEAR MISS = ship is adjacent in up, down, left, right, or diagonal
+      //if the coordinate is a 0 AND there is a 1 adjacent
+      //print the coordinate 
+      //printf("NEAR MISS"); 
+
+    }
   }
-
 }
