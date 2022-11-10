@@ -1,5 +1,6 @@
 # Battleship
 ## C++ Programming I : Battleship Assignment
 
-Terminal: make build
-
+Terminal: 
+make build
+./build
