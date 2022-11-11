@@ -61,26 +61,75 @@ void Scan()
   {
     for (int y = 0; y < columns; y++)
     {
-      if(grid[x][y] == 1) //HIT = ship 
+      //HIT = ship 
+      if(grid[x][y] == 1) 
       {
         cout << x << ",";
         cout << y << ":";      
         printf("HIT \n");
       }
 
-      //change this to only affect 0s that don't have a 1 adjacent
-       if(grid[x][y] == 0) //MISS = no ship + no ship adjacent
+      // MISS and NEAR MISS
+      //This cycles through the coordinates that surround a 0
+       if(grid[x][y] == 0) 
       {
+        if (grid[x - 1][y] == 1)
+        {
+          cout << x << ",";
+          cout << y << ":";  
+          printf("NEAR MISS \n"); //NEAR MISS = this cordinate is 0 BUT a ship is adjacent in up, down, left, right, or diagonal
+        }
+
+        if (grid[x][y - 1] == 1)
+        {
+          cout << x << ",";
+          cout << y << ":";  
+          printf("NEAR MISS \n");
+        }
+
+        if (grid[x + 1][y] == 1)
+        {
+          cout << x << ",";
+          cout << y << ":";  
+          printf("NEAR MISS \n");
+        }
+
+         if (grid[x + 1][y] == 1)
+        {
+          cout << x << ",";
+          cout << y << ":";  
+          printf("NEAR MISS \n");
+        }
+
+        if (grid[x][y + 1] == 1)
+        {
+          cout << x << ",";
+          cout << y << ":";  
+          printf("NEAR MISS \n");
+        }
+
+         if (grid[x - 1][y] == 1)
+        {
+          cout << x << ",";
+          cout << y << ":";  
+          printf("NEAR MISS \n");
+        }
+
+         if (grid[x - 1][y] == 1)
+        {
+          cout << x << ",";
+          cout << y << ":";  
+          printf("NEAR MISS \n");
+        }
+        
+        //MISS = no ship + no ship adjacent
+        else 
+        {
         cout << x << ",";
         cout << y << ":";  
         printf("MISS \n");
+        }
       }
-
-      //NEAR MISS = ship is adjacent in up, down, left, right, or diagonal
-      //if the coordinate is a 0 AND there is a 1 adjacent
-      //print the coordinate 
-      //printf("NEAR MISS"); 
-
     }
   }
 }
