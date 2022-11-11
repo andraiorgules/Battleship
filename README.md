@@ -1,2 +1,8 @@
 # Battleship
-C++ Programming I : Battleship Assignment
+## C++ Programming I : Battleship Assignment
+
+Terminal: 
+
+make build
+
+./build
