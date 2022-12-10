@@ -8,10 +8,10 @@ OBJ = battleship.o util.o
 %.o: %.cpp $(DEPS) 
 	$(CXX) -c -o $@ $< $(CFLAGS)
 
-build: $(OBJ)
+battleship: $(OBJ)
 	$(CXX) -o $@ $^ $(CFLAGS)
 
 .PHONY: clean
 clean:
-	rm *.o && rm build 
+	rm *.o && rm battleship
 
