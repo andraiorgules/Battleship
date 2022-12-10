@@ -3,6 +3,8 @@
 
 Terminal: 
 
-make build
+make battleship
 
-./build
+./battleship
+
+[![Terminal1](https://github.com/andraiorgules/Battleship/blob/main/assets/Terminal1.png)]
